@@ -9,20 +9,23 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <h1 id="level-title">Press Any Key to Start</h1>
     <div class="container">
       <div class="row">
-        <div type="button" id="green" class="btn green"></div>
-        <div type="button" id="red" class="btn red"></div>
+        <div type="button" id="green" class="btn green start"></div>
+        <div type="button" id="red" class="btn red start"></div>
       </div>
       <div class="row">
-        <div type="button" id="yellow" class="btn yellow"></div>
-        <div type="button" id="blue" class="btn blue"></div>
+        <div type="button" id="yellow" class="btn yellow start"></div>
+        <div type="button" id="blue" class="btn blue start"></div>
       </div>
     </div>
-
+    <audio src="./assets/sounds/red.mp3" sound="red"></audio>
+    <audio src="./assets/sounds/green.mp3" sound="green"></audio>
+    <audio src="./assets/sounds/blue.mp3" sound="blue"></audio>
+    <audio src="./assets/sounds/yellow.mp3" sound="yellow"></audio>
+    <audio src="./assets/sounds/wrong.mp3" sound="wrong"></audio>
     <script src="./scripts/game.js" charset="utf-8"></script>
   </body>
 </html>
