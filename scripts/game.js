@@ -52,6 +52,9 @@ function Iteration(pattern) {
       pressButton(color);
     }, (index + 1) * 700);
   });
+  setTimeout(() => {
+    buttonToggleUnclickable();
+  }, pattern.length * 1000);
 }
 // generate random color
 function nextColor() {
@@ -61,6 +64,7 @@ function nextColor() {
 }
 // push generated color
 function StartnextIteration() {
+  buttonToggleUnclickable();
   document.body.style.backgroundColor = "#011F3F";
   gameLevel += 1;
   levelTitle.textContent = `Level ${gameLevel}`;
@@ -92,4 +96,11 @@ function comparePatterns(buttonColor) {
     }, 1000);
     return;
   }
+}
+
+function buttonToggleUnclickable() {
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((button) => {
+    button.classList.toggle("unclickable");
+  });
 }
